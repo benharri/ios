@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Jtn-5a-TBu">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Song List-->
+        <scene sceneID="drb-4A-5gE">
+            <objects>
+                <tableViewController title="Song List" id="Jh5-XA-37n" customClass="MP3ListTableViewController" customModule="pg6" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="eTI-tX-EcO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MP3Cell" id="9f3-Dn-LGx">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9f3-Dn-LGx" id="VvI-UY-cGl">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Jh5-XA-37n" id="rpi-aW-WPs"/>
+                            <outlet property="delegate" destination="Jh5-XA-37n" id="YXu-XO-Gig"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Song List" id="Nja-w5-RSR"/>
+                    <navigationItem key="navigationItem" id="PqG-X9-JyG"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ca-J5-9f7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2670" y="-510"/>
+        </scene>
+        <!--Now Playing-->
+        <scene sceneID="UKq-1H-jeH">
+            <objects>
+                <viewController title="Now Playing" id="u3t-9V-rYY" customClass="NowPlayingViewController" customModule="pg6" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wrE-Tn-CBm"/>
+                        <viewControllerLayoutGuide type="bottom" id="pAY-eK-pnp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="29m-o3-qH3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Now Playing" id="Ric-Kg-EpZ"/>
+                    <navigationItem key="navigationItem" id="STe-h6-iSG"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NwI-rG-IJT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2670" y="162"/>
+        </scene>
+        <!--MP3 Player-->
+        <scene sceneID="inU-FM-jpZ">
+            <objects>
+                <tabBarController title="MP3 Player" automaticallyAdjustsScrollViewInsets="NO" id="Jtn-5a-TBu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="6km-Z7-FL8">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Jh5-XA-37n" kind="relationship" relationship="viewControllers" id="1nq-f1-DJ8"/>
+                        <segue destination="u3t-9V-rYY" kind="relationship" relationship="viewControllers" id="rMr-x2-eFp"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u8L-Wf-zNr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2056" y="-282"/>
+        </scene>
+    </scenes>
+</document>
